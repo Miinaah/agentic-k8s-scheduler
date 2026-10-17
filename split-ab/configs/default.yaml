@@ -1,0 +1,54 @@
+# Configuration for GNN + MADDPG Cluster Scheduler (Split B - Learning Core)
+
+# Model architecture
+gnn_type: "sage"              # "sage" or "gat"
+gnn_layers: 2                 # 2 to 4 message passing layers
+hidden_dim: 64                # Per-node embedding dimension
+gat_heads: 4                  # only used if gnn_type == "gat"
+dropout: 0.0                 # Dropout probability in GNN conv layers
+residual: true                # Residual connections (recommended if gnn_layers > 2)
+use_gnn: true                 # Flag for ablation studies; false routes raw features to actor
+node_feat_dim: 8              # Raw cluster node feature vector dimension
+pod_feat_dim: 6               # Incoming pod request feature vector dimension
+action_dim: 3                 # Suitability scores per node: FT, Utilization, Cost
+critic_input_dim: 203         # Permutation-invariant critic input dimension
+
+# Optimization & Learning Rates
+actor_lr: 0.0002              # 2e-4 (stable actor & GNN learning rate)
+critic_lr: 0.001              # 1e-3 (stable critic learning rate)
+gamma: 0.5                   # Discount factor
+tau: 0.01                     # Polyak soft update rate for target networks
+grad_clip_norm: 1.0           # Maximum gradient norm for actor and critic clipping
+weight_decay: 0.0             # L2 regularization weight
+
+# Experience Replay & Training Dynamics
+buffer_size: 100000           # Replay buffer capacity
+batch_size: 128               # Mini-batch size
+warmup_steps: 1000            # Random exploration steps before gradient updates start
+grad_updates_per_step: 1      # Gradient updates executed per environment step
+n_step_return: 1              # Multi-step TD return horizon
+
+# Exploration Noise
+noise_type: "gaussian"        # "gaussian" or "ou" (Ornstein-Uhlenbeck)
+noise_sigma_start: 0.3        # Initial exploration noise standard deviation
+noise_sigma_end: 0.02         # Final exploration noise standard deviation
+noise_decay_steps: 7500       # Steps to decay noise linearly from start to end
+ou_theta: 0.15                # Reversion rate for Ornstein-Uhlenbeck noise
+ou_sigma: 0.2                 # Volatility for Ornstein-Uhlenbeck noise
+
+# Environment & Scheduling Signals
+num_nodes: 40                 # Default number of cluster nodes
+num_zones: 4                  # Availability zones for topology partitioning
+tiny: false                   # 2-node no-stress mock cluster mode for overfit validation
+max_steps_per_episode: 70     # Scheduling decisions per episode
+episodes: 300                 # Total training episodes
+
+# Configurable Reward Weights (must sum to 1.0)
+reward_weights:
+  fault_tolerance: 0.35        # Weight for Fault Tolerance signal
+  utilization: 0.35            # Weight for Resource Utilization signal
+  cost: 0.3                    # Weight for Cost Efficiency signal
+
+# Logging & Checkpointing
+log_dir: "runs"                # Directory for TensorBoard and plots
+checkpoint_dir: "checkpoints"  # Directory for PyTorch model weights

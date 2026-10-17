@@ -1,0 +1,35 @@
+{
+  "pod_id": "pod-payment-service-auth-901",
+  "scores": [
+    {
+      "node_id": "node-worker-01",
+      "fault_tolerance": 0.88,
+      "utilisation": 0.75,
+      "cost": 0.50
+    },
+    {
+      "node_id": "node-worker-02",
+      "fault_tolerance": 0.92,
+      "utilisation": 0.65,
+      "cost": 0.50
+    },
+    {
+      "node_id": "node-worker-03",
+      "fault_tolerance": 0.65,
+      "utilisation": 0.90,
+      "cost": 0.70
+    },
+    {
+      "node_id": "node-worker-04",
+      "fault_tolerance": 0.78,
+      "utilisation": 0.80,
+      "cost": 0.70
+    },
+    {
+      "node_id": "node-worker-05",
+      "fault_tolerance": 0.70,
+      "utilisation": 0.85,
+      "cost": 0.95
+    }
+  ]
+}

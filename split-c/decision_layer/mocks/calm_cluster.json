@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-10-11T14:30:00Z",
+  "nodes": [
+    {
+      "node_id": "node-worker-01",
+      "cpu_capacity": 32.0,
+      "cpu_used": 7.2,
+      "mem_capacity_gb": 128.0,
+      "mem_used_gb": 34.5,
+      "disk_capacity_gb": 1000.0,
+      "disk_used_gb": 185.0,
+      "health_score": 1.0,
+      "cost_per_hour": 0.48,
+      "zone": "us-central1-a",
+      "pod_count": 18,
+      "recent_failures": 0
+    },
+    {
+      "node_id": "node-worker-02",
+      "cpu_capacity": 32.0,
+      "cpu_used": 8.5,
+      "mem_capacity_gb": 128.0,
+      "mem_used_gb": 41.0,
+      "disk_capacity_gb": 1000.0,
+      "disk_used_gb": 220.0,
+      "health_score": 0.99,
+      "cost_per_hour": 0.48,
+      "zone": "us-central1-b",
+      "pod_count": 22,
+      "recent_failures": 0
+    },
+    {
+      "node_id": "node-worker-03",
+      "cpu_capacity": 16.0,
+      "cpu_used": 3.8,
+      "mem_capacity_gb": 64.0,
+      "mem_used_gb": 18.2,
+      "disk_capacity_gb": 500.0,
+      "disk_used_gb": 110.0,
+      "health_score": 1.0,
+      "cost_per_hour": 0.24,
+      "zone": "us-central1-c",
+      "pod_count": 14,
+      "recent_failures": 0
+    },
+    {
+      "node_id": "node-worker-04",
+      "cpu_capacity": 16.0,
+      "cpu_used": 4.6,
+      "mem_capacity_gb": 64.0,
+      "mem_used_gb": 22.8,
+      "disk_capacity_gb": 500.0,
+      "disk_used_gb": 135.0,
+      "health_score": 0.98,
+      "cost_per_hour": 0.24,
+      "zone": "us-central1-a",
+      "pod_count": 16,
+      "recent_failures": 0
+    },
+    {
+      "node_id": "node-worker-05",
+      "cpu_capacity": 8.0,
+      "cpu_used": 2.1,
+      "mem_capacity_gb": 32.0,
+      "mem_used_gb": 9.4,
+      "disk_capacity_gb": 250.0,
+      "disk_used_gb": 62.0,
+      "health_score": 1.0,
+      "cost_per_hour": 0.12,
+      "zone": "us-central1-b",
+      "pod_count": 9,
+      "recent_failures": 0
+    }
+  ],
+  "pending_pod": {
+    "pod_id": "pod-analytics-batch-42",
+    "cpu_request": 2.0,
+    "mem_request_gb": 4.0,
+    "priority_class": "standard",
+    "qos_class": "Burstable",
+    "estimated_duration_sec": 1800.0
+  }
+}

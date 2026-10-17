@@ -1,0 +1,16 @@
+# Core Deep Learning and Graph Neural Network Dependencies
+torch==2.5.1
+torch-geometric==2.7.0
+torch-scatter==2.1.2
+torch-sparse==0.6.18
+
+# Numerical & Environment Libraries
+numpy==1.26.4
+PyYAML==6.0.1
+
+# Logging & Observability
+tensorboard==2.21.0
+matplotlib>=3.8.0
+
+# Testing & Quality Assurance
+pytest>=8.0.0

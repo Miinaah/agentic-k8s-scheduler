@@ -1,0 +1,31 @@
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Secrets and local configuration
+.env
+.env.*
+
+# IDE and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# macOS archive metadata
+__MACOSX/
+._*
+
+# TensorBoard training event logs
+events.out.tfevents.*
+
+# Temporary files
+*.tmp
+*.log
+# Generated training outputs
+split-ab/runs/
