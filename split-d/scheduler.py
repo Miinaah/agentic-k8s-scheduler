@@ -73,13 +73,13 @@ def main():
                 except Exception as exc:
                     print(f"Binding construction failed: {exc!r}")
                     raise
-
-
+		
                 try:
                     core_api.create_namespaced_pod_binding(
                         name=pod.metadata.name,
                         namespace=pod.metadata.namespace,
-                        body=binding
+                        body=binding,
+                        _preload_content=False
                     )
                     print(
                         f"Scheduled {pod.metadata.namespace}/"
@@ -87,6 +87,7 @@ def main():
                     )
                 except ApiException as exc:
                     print(f"Binding failed: {exc.status} {exc.body}")
+
 
         except ApiException as exc:
             print(f"Kubernetes API error: {exc.status} {exc.body}")
