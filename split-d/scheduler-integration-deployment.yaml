@@ -1,0 +1,24 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: split-d-scheduler-integration
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: split-d-scheduler-integration
+  template:
+    metadata:
+      labels:
+        app: split-d-scheduler-integration
+    spec:
+      serviceAccountName: split-d-scheduler
+      containers:
+        - name: scheduler
+          image: split-d-scheduler:integration-test
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: SCHEDULER_NAME
+              value: split-d-scheduler-integration
