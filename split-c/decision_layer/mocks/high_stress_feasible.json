@@ -1,0 +1,84 @@
+{
+  "timestamp": "2026-10-11T14:45:00Z",
+  "nodes": [
+    {
+      "node_id": "node-worker-01",
+      "cpu_capacity": 32.0,
+      "cpu_used": 26.0,
+      "mem_capacity_gb": 128.0,
+      "mem_used_gb": 118.4,
+      "disk_capacity_gb": 1000.0,
+      "disk_used_gb": 892.0,
+      "health_score": 0.65,
+      "cost_per_hour": 0.48,
+      "zone": "us-central1-a",
+      "pod_count": 98,
+      "recent_failures": 4
+    },
+    {
+      "node_id": "node-worker-02",
+      "cpu_capacity": 32.0,
+      "cpu_used": 28.2,
+      "mem_capacity_gb": 128.0,
+      "mem_used_gb": 113.6,
+      "disk_capacity_gb": 1000.0,
+      "disk_used_gb": 855.0,
+      "health_score": 0.72,
+      "cost_per_hour": 0.48,
+      "zone": "us-central1-b",
+      "pod_count": 94,
+      "recent_failures": 2
+    },
+    {
+      "node_id": "node-worker-03",
+      "cpu_capacity": 16.0,
+      "cpu_used": 15.3,
+      "mem_capacity_gb": 64.0,
+      "mem_used_gb": 60.1,
+      "disk_capacity_gb": 500.0,
+      "disk_used_gb": 468.0,
+      "health_score": 0.55,
+      "cost_per_hour": 0.24,
+      "zone": "us-central1-c",
+      "pod_count": 89,
+      "recent_failures": 6
+    },
+    {
+      "node_id": "node-worker-04",
+      "cpu_capacity": 16.0,
+      "cpu_used": 14.1,
+      "mem_capacity_gb": 64.0,
+      "mem_used_gb": 54.8,
+      "disk_capacity_gb": 500.0,
+      "disk_used_gb": 435.0,
+      "health_score": 0.68,
+      "cost_per_hour": 0.24,
+      "zone": "us-central1-a",
+      "pod_count": 83,
+      "recent_failures": 3
+    },
+    {
+      "node_id": "node-worker-05",
+      "cpu_capacity": 8.0,
+      "cpu_used": 7.5,
+      "mem_capacity_gb": 32.0,
+      "mem_used_gb": 28.9,
+      "disk_capacity_gb": 250.0,
+      "disk_used_gb": 226.0,
+      "health_score": 0.58,
+      "cost_per_hour": 0.12,
+      "zone": "us-central1-b",
+      "pod_count": 65,
+      "recent_failures": 5
+    }
+  ],
+  "pending_pod": {
+    "pod_id": "pod-payment-service-auth-901",
+    "cpu_request": 4.0,
+    "mem_request_gb": 8.0,
+    "priority_class": "production-critical",
+    "qos_class": "Guaranteed",
+    "estimated_duration_sec": 7200.0
+  }
+}
+
