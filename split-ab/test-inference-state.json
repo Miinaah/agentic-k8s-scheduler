@@ -1,0 +1,53 @@
+{
+  "nodes": [
+    {
+      "node_id": "node-a",
+      "cpu_capacity": 8,
+      "cpu_used": 2,
+      "mem_capacity_gb": 16,
+      "mem_used_gb": 4,
+      "disk_capacity_gb": 100,
+      "disk_used_gb": 20,
+      "pod_count": 5,
+      "health_score": 1.0,
+      "cost_per_hour": 0.5,
+      "zone": "zone-a",
+      "recent_failures": 0
+    },
+    {
+      "node_id": "node-b",
+      "cpu_capacity": 8,
+      "cpu_used": 6,
+      "mem_capacity_gb": 16,
+      "mem_used_gb": 12,
+      "disk_capacity_gb": 100,
+      "disk_used_gb": 60,
+      "pod_count": 20,
+      "health_score": 0.9,
+      "cost_per_hour": 0.8,
+      "zone": "zone-b",
+      "recent_failures": 1
+    },
+    {
+      "node_id": "node-c",
+      "cpu_capacity": 16,
+      "cpu_used": 4,
+      "mem_capacity_gb": 32,
+      "mem_used_gb": 8,
+      "disk_capacity_gb": 200,
+      "disk_used_gb": 40,
+      "pod_count": 8,
+      "health_score": 1.0,
+      "cost_per_hour": 0.7,
+      "zone": "zone-a",
+      "recent_failures": 0
+    }
+  ],
+  "pending_pod": {
+    "cpu_request": 1,
+    "mem_request_gb": 2,
+    "priority_class": "high",
+    "qos_class": "Guaranteed",
+    "estimated_duration_sec": 300
+  }
+}
